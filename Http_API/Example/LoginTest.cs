@@ -48,7 +48,7 @@ public class LoginTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoginHttp data = new LoginHttp("nhuanphi0708@gmail.com", "Minhthanh97@");
+        LoginHttp data = new LoginHttp("username", "password");
         data.Send(p =>
         {
             NetworkManager.Instance.SigninResponse.accessToken = p.data.access_token;
