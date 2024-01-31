@@ -18,7 +18,7 @@ See Code Here : [LoginTest.cs](https://github.com/m4gi/RestAPIForUnity/blob/main
 
 
 This snippet shows how to **POST** a REST request
-```
+```csharp
 using BaseHttp.Api;
 using BaseHttp.Core;
 using Duck.Http.Service;
@@ -27,7 +27,7 @@ using Duck.Http.Service;
  - Build a class that represents the object in the API implement interface IResponseData.
  - Set the Serializable Attribute for the newly created class.
 
-```
+```csharp
 [Serializable]
 public class LoginResponse : IResponseData
 {
@@ -46,7 +46,7 @@ public class DataLogin
     public string session;
 }
 ```
-```
+```csharp
 public class LoginHttp : HttpApi<LoginResponse>
 {
     protected override string ApiUrl => "auth/login";
@@ -70,7 +70,7 @@ public class LoginHttp : HttpApi<LoginResponse>
 }
 ```
 
-```
+```csharp
 public class LoginTest : MonoBehaviour
 {
     void Start()
@@ -93,7 +93,7 @@ For making singleton object.
 
 ## Usage
 See Code Here : [BaseSingleton.cs](https://github.com/m4gi/RestAPIForUnity/blob/main/Http_API/BaseSingleton.cs)
-```
+```csharp
 //========================================================
 // class BaseSingleton
 //========================================================
@@ -111,7 +111,7 @@ See Code Here : [BaseSingleton.cs](https://github.com/m4gi/RestAPIForUnity/blob/
  2.  public class OnlyOne : AutoSingletonMono< OnlyOne >
  
 **-->Example:**
-```
+```csharp
 using BaseHttp.Utils;
 
 public class ClassName: ManualSingletonMono<ClassName>{
@@ -127,7 +127,7 @@ Call Singleton:
 
 Singleton for mono behavior object, only return exsited object, don't create new
 
-```
+```csharp
 /// <summary>
 /// Singleton for mono behavior object, only return exsited object, don't create new
 /// </summary>
@@ -206,7 +206,7 @@ public class ManualSingletonMono<T> : MonoBehaviour where T : MonoBehaviour
 
 Need to create a new GameObject to attach the singleton to.
 
-```
+```csharp
 /// <summary>
 /// Create a new GameObject to attach the singleton
 /// </summary>
